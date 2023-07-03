@@ -12,12 +12,12 @@
 PWD:=$(shell pwd)
 
 .PHONY: all
-
+# libsqlcipher.so.0
 all: clean init
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir/element
 	$(PWD)/bin/Apprepo.AppImage --destination=$(PWD)/build appdir boilerplate \
 	    libgdk-pixbuf2.0-0 libatk1.0-0 libatk-bridge2.0-0 libgtk2.0-0 \
-	    libreadline8 at-spi2-core libpango-1.0-0 libselinux1 \
+	    libreadline8 at-spi2-core libpango-1.0-0 libselinux1 libsqlcipher0 \
 		libtinfo6 libncurses6 libtinfo5 element-desktop
 
 	cp -r /opt/opt/Element*/* $(PWD)/build/Boilerplate.AppDir/element/
